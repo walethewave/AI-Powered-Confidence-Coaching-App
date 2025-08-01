@@ -1,10 +1,7 @@
-
 # 🌟 ConfidenceAI — Your Personal Confidence Coach  
 _Empowering authentic growth through AI-driven, explainable coaching_
 
-👉 **[🌐 Try the App Live on Streamlit](https://9punzdhswetzx92taubijy.streamlit.app/)**  
-
-_Empowering authentic growth through AI-driven, explainable coaching_
+👉 **[🌐 Try the App Live on Streamlit](https://9punzdhswetzx92taubijy.streamlit.app/)**
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/walethewave/Confidence-Coach/ci.yml?branch=main&label=build)](https://github.com/walethewave/Confidence-Coach/actions)
 [![PyPI Version](https://img.shields.io/pypi/v/confidenceai)](https://pypi.org/project/confidenceai/)
@@ -17,7 +14,8 @@ _Empowering authentic growth through AI-driven, explainable coaching_
 
 ## 👋 Why ConfidenceAI? (The Problem)
 
-As a developer and mentor, I’ve seen firsthand how self-doubt and lack of confidence can stall even the most talented people. Traditional self-help tools are generic, impersonal, and often fail to adapt to real, nuanced human struggles.  
+As a developer and mentor, I’ve seen firsthand how self-doubt and lack of confidence can stall even the most talented people. Traditional self-help tools are generic, impersonal, and often fail to adapt to real, nuanced human struggles.
+
 **ConfidenceAI** was born from a simple question:  
 > _What if everyone could access a supportive, expert coach—anytime, anywhere, tailored to their unique journey?_
 
@@ -25,10 +23,9 @@ As a developer and mentor, I’ve seen firsthand how self-doubt and lack of conf
 
 ## 🚀 Solution Overview
 
-**ConfidenceAI** is a next-generation, AI-powered confidence coach built with Streamlit, Pydantic, and Google Gemini.  
-It combines advanced prompt engineering, explainable analytics, and a privacy-first design to deliver actionable, empathetic coaching—**not just pep talks**.
+**ConfidenceAI** is a next-generation, AI-powered confidence coach built with Streamlit, Pydantic, and Google Gemini. It combines advanced prompt engineering, explainable analytics, and a privacy-first design to deliver actionable, empathetic coaching—**not just pep talks**.
 
-**Key Innovations:**
+### **Key Innovations:**
 - **Explainable AI**: Every confidence score is justified with transparent reasoning.
 - **Real-Time Analytics**: Visualize your confidence journey and progress.
 - **Dynamic Prompting**: Context-aware, human-like responses that adapt to your needs.
@@ -72,7 +69,6 @@ It combines advanced prompt engineering, explainable analytics, and a privacy-fi
 ### 1. Installation
 
 #### Using pip
-
 ```bash
 pip install -r requirements.txt
 ````
@@ -111,55 +107,7 @@ streamlit run app.py
 
 ## 🛠️ Documentation
 
-<details>
-<summary><strong>API Overview</strong></summary>
-
-### Core Classes
-
-#### `ConfidenceChatbot`
-
-* `generate_response(user_message: UserMessage) -> AIResponse`
-  Generates a full coaching response, including tips, next steps, and analytics.
-
-* `get_session_summary() -> dict`
-  Returns session analytics: message count, average confidence, trend, duration.
-
-* `export_session() -> dict`
-  Exports full conversation and analytics as JSON.
-
-#### `AIResponse`
-
-| Field             | Type                 | Description                             |
-| ----------------- | -------------------- | --------------------------------------- |
-| response          | str                  | Main conversational response            |
-| confidence\_level | int (1–10)           | AI-assessed confidence score            |
-| confidence\_tips  | List\[str]           | Actionable confidence tips              |
-| next\_steps       | List\[str]           | Specific next actions                   |
-| assessment        | ConfidenceAssessment | Detailed AI analysis                    |
-| matched\_keywords | List\[str]           | Keywords used for confidence assessment |
-| timestamp         | str (ISO)            | Timestamp of response                   |
-
-#### Example: Generating a Response
-
-```python
-from models import UserMessage
-from chatbot import ConfidenceChatbot
-
-chatbot = ConfidenceChatbot()
-user_msg = UserMessage(content="I'm feeling stuck and unsure about my next steps.")
-response = chatbot.generate_response(user_msg)
-print(response.response)
-print(response.confidence_level)
-print(response.confidence_tips)
-```
-
-#### Configuration Options
-
-* `GEMINI_API_KEY` (env): Required for AI responses.
-* `MAX_MESSAGE_LENGTH` (config): Limit user input length.
-* `DEFAULT_CONFIDENCE_LEVEL`: Fallback score if analysis fails.
-
-</details>
+*coming soon...*
 
 ---
 
@@ -212,19 +160,19 @@ pytest
 
 ## 🛠️ Troubleshooting
 
-| Issue                                    | Solution                                                      |
-| ---------------------------------------- | ------------------------------------------------------------- |
-| `GEMINI_API_KEY` not found               | Ensure `.env` file is present and key is valid                |
-| Streamlit app won't start                | Check Python version (3.8+), dependencies, and port conflicts |
-| AI responses are generic or missing tips | Check API quota, network, or try restarting the app           |
-| Exported session missing data            | Ensure session is active and not reset before export          |
+| Issue                         | Solution                                                      |
+| ----------------------------- | ------------------------------------------------------------- |
+| `GEMINI_API_KEY` not found    | Ensure `.env` file is present and key is valid                |
+| Streamlit app won't start     | Check Python version (3.8+), dependencies, and port conflicts |
+| AI responses are generic      | Check API quota, network, or try restarting the app           |
+| Exported session missing data | Ensure session is active and not reset before export          |
 
 ---
 
 ## 📈 Performance
 
 * **Response Time**: \~1.2s avg (Gemini API, local testing)
-* **Memory Usage**: < 200MB (typical session)
+* **Memory Usage**: <200MB (typical session)
 * **Scalability**: Stateless backend, suitable for containerization
 
 ---
@@ -240,7 +188,7 @@ We welcome contributions of all kinds!
 4. Write tests for your changes.
 5. Submit a pull request with a clear description.
 
-**Development Setup:**
+### Development Setup
 
 ```bash
 # Install pre-commit hooks
@@ -283,11 +231,11 @@ flake8 .
 
 **Afolabi Olawale**
 AI Engineer | AI Enthusiast | Confidence Advocate
+[GitHub](https://github.com/walethewave)
 
-* [GitHub](https://github.com/walethewave)
-*
-
-> *"I built ConfidenceAI because I believe everyone deserves a champion in their corner. If this project helps even one person take a step forward, it’s a win. I’m always open to feedback, collaboration, or just a chat about AI and human potential—reach out anytime!"*
+> *"I built ConfidenceAI because I believe everyone deserves a champion in their corner.
+> If this project helps even one person take a step forward, it’s a win.
+> I’m always open to feedback, collaboration, or just a chat about AI and human potential—reach out anytime!"*
 
 ---
 
@@ -296,5 +244,8 @@ AI Engineer | AI Enthusiast | Confidence Advocate
 If you find this project valuable, please ⭐️ star the repo, open issues, or submit PRs.
 Let’s build a more confident world—one conversation at a time.
 
-#   A I - P o w e r e d - C o n f i d e n c e - C o a c h i n g - A p p  
- 
+---
+
+# AI-Powered-Confidence-Coaching-App
+
+
